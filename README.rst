@@ -10,6 +10,20 @@ performance overhead and additional complexity of all the features I don't use.
 If you have a feature request for this project, then you should probably be
 using ``virtualenvwrapper`` instead.
 
+Features
+========
+
+#. Organizes all of your virtual environments in one place.
+#. Wrappers for managing your virtual environments (create, delete, ~~copy~~).
+#. Use a single command to switch between environments.
+#. ~~Tab completion for commands that take a virtual environment as argument.~~
+#. ~~User-configurable hooks for all operations.~~
+#. ~~Plugin system for more creating sharable extensions.~~
+
+If the ~~crossed out~~ features are appealing to you, use `Doug Hellmann's
+``virtualenvwrapper`` <https://pypi.python.org/pypi/virtualenvwrapper>`_
+instead.
+
 Usage
 =====
 
