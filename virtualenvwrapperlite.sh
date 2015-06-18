@@ -1,7 +1,7 @@
 #!/bin/bash
 
-export VIRTUALENV_DIR=${VIRTUALENV_DIR:-$HOME/Environments}
-mkdir -p "$VIRTUALENV_DIR"
+export WORKON_HOME=${WORKON_HOME:-$HOME/Envs}
+mkdir -p "$WORKON_HOME"
 
 function deactivate_venv() {
     if type -t deactivate > /dev/null; then
@@ -11,21 +11,21 @@ function deactivate_venv() {
 
 function workon() {
     deactivate_venv
-    source "$VIRTUALENV_DIR/$1/bin/activate";
+    source "$WORKON_HOME/$1/bin/activate";
 }
 
 function mkvirtualenv() {
-    if [ ! -d "$VIRTUALENV_DIR/$1" ]; then
-        virtualenv "$VIRTUALENV_DIR/$1";
+    if [ ! -d "$WORKON_HOME/$1" ]; then
+        virtualenv "$WORKON_HOME/$1";
     fi;
     workon "$1";
 }
 
 function rmvirtualenv() {
     deactivate_venv
-    rm -rf "$VIRTUALENV_DIR/$1";
+    rm -rf "$WORKON_HOME/$1";
 }
 
 function lsvirtualenv() {
-    ls -1 "$VIRTUALENV_DIR";
+    ls -1 "$WORKON_HOME";
 }

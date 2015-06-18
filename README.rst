@@ -42,3 +42,20 @@ Remove a virtual environment, even if you're still using it:
 
     (other_venv) ~$ rmvirtualenv other_venv
     ~$
+
+Setup
+=====
+
+Similar to ``virtualenvwrapper``, ``virtualenvwrapperlite`` supports the
+``WORKON_HOME`` environment variable for determining the "home" folder for all
+of your Python virtual environments. If you don't specify a value for
+``WORKON_HOME``, it will default to ``~/Envs`` and the directory will be
+created for you.
+
+Clone this repository, and add the following to your ``.bashrc`` or
+``.profile``:
+
+.. code-block:: bash
+
+    export WORKON_HOME=~/Envs
+    source path/to/virtualenvwrapperlite.sh
