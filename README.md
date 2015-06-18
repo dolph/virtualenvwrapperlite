@@ -12,11 +12,11 @@ using `virtualenvwrapper` instead.
 Features
 --------
 
-1. Organizes all of your virtual environments in one place.
+1. **Organizes all of your virtual environments in one place.**
 
-2. Wrappers for managing your virtual environments (create, delete, ~~copy~~).
+2. **Wrappers for managing your virtual environments (create, delete,** ~~copy~~**).**
 
-3. Use a single command to switch between environments.
+3. **Use a single command to switch between environments.**
 
 4. ~~Tab completion for commands that take a virtual environment as argument.~~
 
