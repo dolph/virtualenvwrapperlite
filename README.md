@@ -12,17 +12,17 @@ using `virtualenvwrapper` instead.
 Features
 --------
 
-#. Organizes all of your virtual environments in one place.
+1. Organizes all of your virtual environments in one place.
 
-#. Wrappers for managing your virtual environments (create, delete, ~~copy~~).
+2. Wrappers for managing your virtual environments (create, delete, ~~copy~~).
 
-#. Use a single command to switch between environments.
+3. Use a single command to switch between environments.
 
-#. ~~Tab completion for commands that take a virtual environment as argument.~~
+4. ~~Tab completion for commands that take a virtual environment as argument.~~
 
-#. ~~User-configurable hooks for all operations.~~
+5. ~~User-configurable hooks for all operations.~~
 
-#. ~~Plugin system for more creating sharable extensions.~~
+6. ~~Plugin system for more creating sharable extensions.~~
 
 If the ~~crossed out~~ features are appealing to you, use [Doug Hellmann's
 `virtualenvwrapper`](https://pypi.python.org/pypi/virtualenvwrapper) instead.
