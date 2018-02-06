@@ -33,24 +33,24 @@ Usage
 Create a Python virtual environment, no matter your working directory, and
 immediately jump into it:
 
-    ~$ mkvirtualenv my_new_venv
-    (my_new_venv) ~$
+    $ mkvirtualenv my_new_venv
+    (my_new_venv) $
 
 Similarly, list your available virtual environments:
 
-    (my_new_venv) ~$ lsvirtualenv
+    (my_new_venv) $ lsvirtualenv
     my_new_venv
     other_venv
 
 Switch to another virtual environment at any time:
 
-    (my_new_venv) ~$ workon other_venv
-    (other_venv) ~$
+    (my_new_venv) $ workon other_venv
+    (other_venv) $
 
 Remove a virtual environment, even if you're still using it:
 
-    (other_venv) ~$ rmvirtualenv other_venv
-    ~$
+    (other_venv) $ rmvirtualenv other_venv
+    $
 
 Setup
 -----
