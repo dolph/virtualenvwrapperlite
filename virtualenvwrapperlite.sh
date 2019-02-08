@@ -21,6 +21,13 @@ mkvirtualenv () {
     workon "$1";
 }
 
+mkvirtualenv3 () {
+    if [ ! -d "$WORKON_HOME/$1" ]; then
+        virtualenv --python=python3 "$WORKON_HOME/$1";
+    fi;
+    workon "$1";
+}
+
 rmvirtualenv () {
     deactivate_venv
     rm -rf "$WORKON_HOME/$1";
