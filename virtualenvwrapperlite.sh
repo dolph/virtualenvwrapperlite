@@ -16,14 +16,14 @@ workon () {
 
 mkvirtualenv () {
     if [ ! -d "$WORKON_HOME/$1" ]; then
-        virtualenv "$WORKON_HOME/$1";
+        virtualenv --python=python3 "$WORKON_HOME/$1";
     fi;
     workon "$1";
 }
 
-mkvirtualenv3 () {
+mkvirtualenv2 () {
     if [ ! -d "$WORKON_HOME/$1" ]; then
-        virtualenv --python=python3 "$WORKON_HOME/$1";
+        virtualenv --python=python2 "$WORKON_HOME/$1";
     fi;
     workon "$1";
 }
