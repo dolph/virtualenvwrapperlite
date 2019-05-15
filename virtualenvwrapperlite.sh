@@ -11,26 +11,37 @@ deactivate_venv () {
 
 workon () {
     deactivate_venv
-    source "$WORKON_HOME/$1/bin/activate";
+    if [ ! -d "$WORKON_HOME/$1" ]; then
+        mkvirtualenv "$1"
+    else
+        source "$WORKON_HOME/$1/bin/activate";
+    fi
 }
 
 mkvirtualenv () {
+    deactivate_venv
     if [ ! -d "$WORKON_HOME/$1" ]; then
-        virtualenv --python=python3 "$WORKON_HOME/$1";
+        python3 -m virtualenv --python=python3 "$WORKON_HOME/$1";
     fi;
-    workon "$1";
+    source "$WORKON_HOME/$1/bin/activate";
 }
 
 mkvirtualenv2 () {
+    deactivate_venv
     if [ ! -d "$WORKON_HOME/$1" ]; then
-        virtualenv --python=python2 "$WORKON_HOME/$1";
+        python3 -m virtualenv --python=python2 "$WORKON_HOME/$1";
     fi;
-    workon "$1";
+    source "$WORKON_HOME/$1/bin/activate";
 }
 
 rmvirtualenv () {
     deactivate_venv
-    rm -rf "$WORKON_HOME/$1";
+    if [ -d "$WORKON_HOME/$1" ]; then
+        rm -rf "$WORKON_HOME/$1";
+    else
+        echo "Virtualenv not found."
+        ls -1 "$WORKON_HOME";
+    fi
 }
 
 lsvirtualenv () {
