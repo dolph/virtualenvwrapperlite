@@ -24,6 +24,8 @@ mkvirtualenv () {
         python3 -m virtualenv --python=python3 "$WORKON_HOME/$1";
     fi;
     source "$WORKON_HOME/$1/bin/activate";
+
+    pip install --upgrade pip
 }
 
 mkvirtualenv2 () {
